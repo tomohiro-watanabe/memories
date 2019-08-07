@@ -15,11 +15,13 @@ class Controller extends BaseController
         $count_memories = $user->memories()->count();
         $count_followings = $user->followings()->count();
         $count_followers = $user->followers()->count();
+        $count_favorites = $user->favorites()->count();
 
         return [
             'count_memories' => $count_memories,
             'count_followings' => $count_followings,
             'count_followers' => $count_followers,
+            'count_favorites' => $count_favorites,
         ];
     }
 }
