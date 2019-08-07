@@ -11,7 +11,7 @@ class MemoriesController extends Controller
         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $memories = $user->memories()->orderBy('created_at', 'desc')->paginate(10);
+            $memories = $user->feed_memories()->orderBy('created_at', 'desc')->paginate(10);
             
             $data = [
                 'user' => $user,
