@@ -10,4 +10,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
+    public function counts($user) {
+        $count_memories = $user->memories()->count();
+
+        return [
+            'count_memories' => $count_memories,
+        ];
+    }
 }
