@@ -7,6 +7,9 @@
                     {!! link_to_route('users.show', $memory->user->name, ['id' => $memory->user->id]) !!} <span class="text-muted">posted at {{ $memory->created_at }}</span>
                 </div>
                 <div>
+                    {{-- S3の画像のURLから画像として表示する --}}
+                    <img src="{{ $memory->image }}" class="img-thumbnail" border="5">
+                    
                     <p class="mb-0">{!! nl2br(e($memory->content)) !!}</p>
                 </div>
                  <div>

@@ -10,19 +10,23 @@
 
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
-                    {!! Form::label('email', 'Email') !!}
+                    {!! Form::label('email', 'メールアドレス') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('password', 'Password') !!}
+                    {!! Form::label('password', 'パスワード') !!}
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
 
                 {!! Form::submit('ログイン', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
 
-            <p class="mt-2">New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
+            <p class="mt-2">アカウントを作成しますか？ {!! link_to_route('signup.get', 'アカウント作成はこちら') !!}</p>
+            テスト用アカウント<br>
+            メールアドレス:test@test.com<br>
+            パスワード:123456
+            
         </div>
     </div>
 @endsection
